@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "playoverwatch/scraper/version"
+require "playoverwatch/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "playoverwatch-scraper"
-  spec.version       = Playoverwatch::Scraper::VERSION
+  spec.version       = PlayOverwatch::VERSION
   spec.authors       = ["Duncan Leo"]
   spec.email         = ["duncanleo97@gmail.com"]
 
