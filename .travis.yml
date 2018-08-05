@@ -8,3 +8,4 @@ deploy:
   api_key: $RUBYGEMS_API_KEY
   on:
     tags: true
+    all_branches: true
