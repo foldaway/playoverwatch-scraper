@@ -1,8 +1,8 @@
 # playoverwatch-scraper
-[RubyDocs](https://www.rubydoc.info/github/bottleneckco/playoverwatch-scraper/master)
 [![Build Status](https://travis-ci.org/bottleneckco/playoverwatch-scraper.svg?branch=master)](https://travis-ci.org/bottleneckco/playoverwatch-scraper)
+[![Gem Version](https://badge.fury.io/rb/playoverwatch-scraper.svg)](https://badge.fury.io/rb/playoverwatch-scraper)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/playoverwatch/scraper`. To experiment with that code, run `bin/console` for an interactive prompt.
+Retrieve player statistics from their profiles on [the Overwatch website](playoverwatch.com).
 
 ## Installation
 
@@ -21,6 +21,8 @@ Or install it yourself as:
     $ gem install playoverwatch-scraper
 
 ## Usage
+
+[RubyDocs](https://www.rubydoc.info/github/bottleneckco/playoverwatch-scraper/master)
 
 ```ruby
 scraper = PlayOverwatch::Scraper.new('Someone-1234')
