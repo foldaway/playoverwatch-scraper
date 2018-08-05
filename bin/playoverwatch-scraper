@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'playoverwatch/scraper'
+require 'json'
+
+scraper = PlayOverwatch::Scraper.new(ARGV[0])
+data = {
+  :player_icon => scraper.player_icon,
+  :player_level => scraper.player_level,
+  :endorsement_level => scraper.endorsement_level,
+  :sr => scraper.sr,
+  :main_qp => scraper.main_qp,
+  :main_comp => scraper.main_comp
+}
+
+puts JSON.pretty_generate(data)
