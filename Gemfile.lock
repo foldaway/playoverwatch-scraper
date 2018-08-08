@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     playoverwatch-scraper (0.1.1)
+      nokogiri (~> 1.8)
 
 GEM
   remote: https://rubygems.org/
@@ -35,7 +36,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  nokogiri (~> 1.8)
   playoverwatch-scraper!
   pry (~> 0.11.3)
   rake (~> 10.0)
