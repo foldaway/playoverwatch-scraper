@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "playoverwatch/scraper"
+require "playoverwatch-scraper"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

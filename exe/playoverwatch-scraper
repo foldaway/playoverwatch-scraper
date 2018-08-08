@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'playoverwatch/scraper'
+require 'playoverwatch-scraper'
 require 'json'
 
 scraper = PlayOverwatch::Scraper.new(ARGV[0])
