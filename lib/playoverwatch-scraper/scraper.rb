@@ -13,6 +13,7 @@ module PlayOverwatch
     # The +battle_tag+ can be in the hex (#) or hyphenated (-) format. It IS case sensitive.
     def initialize(battle_tag)
       @player_page = Nokogiri::HTML(open("https://playoverwatch.com/en-us/career/pc/#{battle_tag.gsub(/#/, '-')}", "User-Agent" => CHROME_USER_AGENT))
+      @player_data = JSON.parse open("https://playoverwatch.com/en-us/search/account-by-name/#{battle_tag.gsub(/#/, '-').gsub(/-/, '%23')}", "User-Agent" => CHROME_USER_AGENT).read
     end
 
     ##
@@ -24,16 +25,7 @@ module PlayOverwatch
     ##
     # Retrieve a player's level
     def player_level
-      quotient = 0
-      remainder = @player_page.css('.player-level .u-vertical-center').first.content.to_i
-      player_rank_div = @player_page.css('.player-rank')
-      if player_rank_div.any?
-        level_stars_image_url_code = player_rank_div.first['style'].scan(/0x0250000000000(.+?)_Rank.png/i).flatten
-        if level_stars_image_url_code.any?
-          quotient = 100 * rank_map[level_stars_image_url_code.first]
-        end
-      end
-      return quotient + remainder
+      @player_data.first['level'].to_i
     end
 
     ##
