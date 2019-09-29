@@ -31,7 +31,7 @@ module PlayOverwatch
     ##
     # Retrieve a player's endorsement level
     def endorsement_level
-      @player_page.css('.endorsement-level .u-center').first.content.to_i
+      @player_page.css('.EndorsementIcon-tooltip .u-center').first.content.to_i
     end
 
     ##
